@@ -76,7 +76,7 @@ export function KpiBlock({ title, scope }: KpiBlockProps) {
               setEditingLabel("");
               setModalOpen(true);
             }}
-            className="rounded bg-accent/20 px-2 py-1 text-xs text-accent hover:bg-accent/30"
+            className="min-h-[44px] rounded bg-accent/20 px-3 py-2 text-xs text-accent hover:bg-accent/30"
           >
             + 항목
           </button>

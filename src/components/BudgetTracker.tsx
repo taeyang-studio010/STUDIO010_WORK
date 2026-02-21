@@ -45,7 +45,7 @@ export function BudgetTracker() {
             setEditingProject(null);
             setProjectModalOpen(true);
           }}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-[#0a0a0a] hover:bg-accent/90"
+          className="min-h-[44px] rounded-lg bg-accent px-4 py-2 text-sm font-medium text-[#0a0a0a] hover:bg-accent/90"
         >
           프로젝트 추가
         </button>
@@ -81,7 +81,7 @@ export function BudgetTracker() {
                         setEntryProject(p);
                         setEntryModalOpen(true);
                       }}
-                      className="rounded bg-white/10 px-2 py-1 text-xs text-text-secondary hover:bg-white/15 hover:text-white"
+                      className="min-h-[44px] rounded bg-white/10 px-3 py-2 text-xs text-text-secondary hover:bg-white/15 hover:text-white"
                     >
                       지출 등록
                     </button>

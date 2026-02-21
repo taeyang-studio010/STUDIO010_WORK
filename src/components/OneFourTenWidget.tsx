@@ -19,7 +19,7 @@ export function OneFourTenWidget() {
     <div className="glass-panel p-4 transition-fluid hover-lift">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="text-sm font-medium text-text-secondary">1 / 4 / 10 이번 주</h3>
-        <button type="button" onClick={() => { setEditingItem(null); setModalOpen(true); }} className="rounded bg-accent/20 px-2 py-1 text-xs text-accent hover:bg-accent/30">+ 추가</button>
+        <button type="button" onClick={() => { setEditingItem(null); setModalOpen(true); }} className="min-h-[44px] rounded bg-accent/20 px-3 py-2 text-xs text-accent hover:bg-accent/30">+ 추가</button>
       </div>
       <div className="grid gap-2 sm:grid-cols-3">
         {items.map((item) => (

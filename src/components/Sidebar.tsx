@@ -3,17 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { navItems } from "@/config/nav";
 import { ExecInvitePanel } from "@/components/ExecInvitePanel";
 import { useAuth } from "@/features/auth/useAuth";
-
-const navItems = [
-  { href: "/", label: "010 NOW", icon: "◉" },
-  { href: "/tasks", label: "010 SHARE", icon: "▣" },
-  { href: "/calendar", label: "010 CALENDAR", icon: "◐" },
-  { href: "/insights", label: "010 STORAGE", icon: "◇" },
-  { href: "/budget", label: "010 MONEY", icon: "▤" },
-  { href: "/talk", label: "010 TALK", icon: "💬" },
-];
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -24,6 +16,7 @@ export function Sidebar() {
         "fixed left-0 top-0 z-40 h-screen w-[240px] shrink-0",
         "glass-panel-strong border-0 border-r border-border",
         "flex flex-col transition-fluid",
+        "max-md:hidden",
         "max-lg:w-[72px] max-lg:items-center max-lg:px-0"
       )}
     >

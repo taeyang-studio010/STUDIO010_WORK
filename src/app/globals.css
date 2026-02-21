@@ -72,3 +72,11 @@ body {
 .hover-lift:hover {
   transform: translateY(-2px);
 }
+
+/* Safe area for mobile notches / home indicator */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0);
+}

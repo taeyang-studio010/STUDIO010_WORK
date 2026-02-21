@@ -28,7 +28,7 @@ export function Modal({
   return React.createElement(
     "div",
     {
-      className: "fixed inset-0 z-50 flex items-center justify-center p-4",
+      className: "fixed inset-0 z-50 flex items-end justify-center md:items-center md:p-4",
       role: "dialog",
       "aria-modal": true,
       "aria-labelledby": "modal-title",
@@ -42,7 +42,9 @@ export function Modal({
       "div",
       {
         className: cn(
-          "glass-panel-strong relative max-h-[90vh] w-full max-w-md overflow-auto rounded-2xl border border-border p-6 shadow-xl",
+          "glass-panel-strong relative w-full overflow-auto rounded-t-2xl border border-border p-6 shadow-xl",
+          "max-h-[90vh] max-w-md md:rounded-2xl md:max-h-[90vh]",
+          "min-h-[50vh] md:min-h-0",
           className
         ),
       },

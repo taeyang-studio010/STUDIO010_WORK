@@ -26,8 +26,8 @@ export function ChatView() {
   }
 
   return (
-    <div className="glass-panel flex flex-1 flex-col overflow-hidden rounded-xl border border-border">
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+    <div className="glass-panel flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl border border-border">
+      <div className="flex-1 overflow-y-auto p-4 pb-safe space-y-3">
         {loading && messages.length === 0 ? (
           <p className="text-sm text-text-tertiary">불러오는 중...</p>
         ) : (
@@ -65,19 +65,19 @@ export function ChatView() {
         )}
         <div ref={bottomRef} />
       </div>
-      <form onSubmit={handleSubmit} className="border-t border-border p-3">
+      <form onSubmit={handleSubmit} className="border-t border-border p-3 pb-safe">
         <div className="flex gap-2">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="메시지 입력..."
-            className="flex-1 rounded-lg border border-border bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            className="min-h-[44px] flex-1 rounded-lg border border-border bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           />
           <button
             type="submit"
             disabled={!input.trim()}
-            className="rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-[#0a0a0a] hover:bg-accent/90 disabled:opacity-50"
+            className="min-h-[44px] min-w-[44px] rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-[#0a0a0a] hover:bg-accent/90 disabled:opacity-50"
           >
             전송
           </button>
